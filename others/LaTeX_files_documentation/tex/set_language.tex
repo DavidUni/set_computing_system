@@ -1,0 +1,125 @@
+%!TEX root = main.tex
+\chapter{El lenguaje \Set}
+
+	\section{Introducción al lenguaje \Set}
+
+		Cuando estudiamos un nuevo lenguaje natural como el inglés, el alemán o el chino, empezamos aprendiendo el alfabeto de símbolos usados en el lenguaje, a continuación formamos palabras con esos símbolos. Lo siguiente es aprender la manera correcta en la cual se deben colocar las palabras para formar frases y el significado de dichas combinaciones de palabras. La misma idea se aplica al lenguaje de programación de alto nivel \Set\footnote
+		{
+			Un lenguaje de programación de «alto nivel» se caracteriza por expresar los algoritmos de una manera adecuada a la capacidad cognitiva humana, en lugar de la capacidad ejecutora de la máquina de las máquinas. Para ello se utilizan términos o palabras propias del lenguaje natural o del lenguaje Matemático.
+		}. %
+		La característica principal de este lenguaje es que permite representar los algoritmos de forma muy parecida a como se hace en los lenguajes de especificación de algoritmos ({\sc lea}); es decir, mediante uso de operandos, términos y expresiones que son propias del lenguaje matemático. Para ello se permiten algunos símbolos del juego de \emph{caracteres unicode} con los que representar de forma explícita 
+		\begin{itemize}
+			\item tipos de datos como conjuntos numéricos matemáticos (ℕ, ℤ, ℚ), 
+
+			\item declaraciones de variables con el operador de pertenencia de conjuntos ∈,
+
+			\item asignaciones de valores a variables con el símbolo ← o 
+
+			\item declaraciones de funciones con los símbolos × (para separar los parámetros) o →, entre otros.
+		\end{itemize}
+
+		Este lenguaje carece de los conceptos de referencia, puntero, reserva y liberación de memoria, y dado se permite el uso de notación matemática, es el lenguaje de alto nivel más puro que existe.
+
+
+
+	\section{Un programa en \Set}
+
+		Un programa fuente en lenguaje \Set está compuesto por
+		\begin{itemize}
+			\item un fichero denominado \emph{principal} que puede tener cualquier nombre con extensión \cod{.mset}\footnote
+			{
+				La \cod{m} que aparece en la extensión \cod{.mset} es la primera letra de la palabra inglesa «main» que significa «principal». 
+			},
+			y por
+
+			\item cero o varios \emph{módulos} que pueden tener cualquier nombre y cuya extensión es
+			\begin{itemize}
+				\item \cod{.hset} para los módulos de cabecera\footnote
+				{
+					La \cod{h} que aparece en la extensión \cod{.hset} es la primera letra de la palabra inglesa «header» que significa «cabecera». 
+				}
+				y 
+
+				\item \cod{.iset} para los módulos de implementación\footnote
+				{
+					La \cod{i} que aparece en la extensión \cod{.iset} es la primera letra de la palabra inglesa «implementation» que significa «implementar». 
+				}.
+			\end{itemize}
+		\end{itemize}
+
+		Para compilar un programa fuente en lenguaje \Set debe ejecutar en su terminal el comando \cod{cset}, seguido de la ruta donde se encuentra el programa fuente principal (el que tiene la extensión \cod{.mset}) seguido de su nombre, con o sin extensión. Para poder ejecutar el comando de compilación \cod{cset} debe haber instalado previamente el compilador \Set en su sistema (consulte el apéndice~\ref{app:installation_set_compiler}).
+
+		Por ejemplo, abra su editor de texto plano preferido y escriba el siguiente programa fuente:
+		\lstinputlisting[language=set,caption={Mensaje «Hola mundo» \getlstname}]{../listings/set/examples/hello_world.mset}
+		
+		Guarde el programa fuente con el nombre que prefiera y añádale la extensión \cod{.mset} justo a continuación del nombre. Suponiendo que se ha guardado en el escritorio como \cod{hello\_world.set}, la compilación en diferentes sistemas se hace de la siguiente forma:
+		\begin{itemize}
+			\item %En Linux y en OS X escribiríamos: \cod{cset \textasciitilde/Desktop/hola_mundo.set}
+
+			\item %En Windows escribiríamos: \cod{cset \%HOMEPATH\%\barInv Desktop\barInv hola_mundo.set}
+		\end{itemize}
+
+		Una vez compilado obtendrá un programa ejecutable que puede ejecutar de la siguiente forma:
+		\begin{itemize}
+			\item En linux y en OS X:
+
+			\item En Windows:
+		\end{itemize}
+
+		Como se puede observar, la ejecución muestra en la terminal de su sistema el mensaje «\cod{Hola mundo}».
+
+		Las funciones solo se pueden declarar e implementar en los módulos, de hecho todo el código que aparezca en un módulo debe estar dentro de una función. Con esto se fuerza al programador, desde el primer momento,  
+
+
+
+	\section{Elementos léxicos}
+
+		En las siguientes subsecciones se discuten los elementos léxicos del lenguaje \Set: comentarios, identificadores, palabras reservadas, números, caracteres y cadenas de caracteres.
+
+
+
+		\subsection{Comentarios}
+
+			Los comentarios son descripciones o aclaraciones del código en lenguaje natural que aparecen escritas junto a este y que ayudan a entender su estructura y su lógica (su significado). En el lenguaje \Set se permiten los siguientes dos tipos de comentarios:
+			\begin{itemize}
+				\item Comentarios monolínea. Se añaden escribiendo un punto y coma (\sbr{\cod{;}}) seguido por el texto del comentario como se muestra en el siguiente código:
+				\lstinputlisting[language=set,caption={Comentario monolínea \getlstname}]{../listings/set/examples/singleline_comments.mset}
+
+				\item Comentarios multilínea. Comienzan con los caracteres de apertura de comentario punto y coma guion (\sbr{\cod{;-}}), sin ningún espacio entre ambos caracteres, y se extienden hasta los caracteres de cierre guion punto y coma (\sbr{\cod{-;}}), de nuevo, sin ningún espacio entre ambos. Los caracteres de apertura y cierre pueden estar en diferentes lineas o sobre la misma linea como se muestra en el siguiente código:
+				\lstinputlisting[language=set,caption={Comentario multilínea \getlstname}]{../listings/set/examples/multiline_comments.mset}
+			\end{itemize}
+
+			
+
+	\section{Elementos sintácticos}
+
+
+
+		\subsection{Declaración de funciones}
+
+			Como ya se ha dicho en secciones anteriores
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

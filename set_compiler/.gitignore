@@ -1,0 +1,18 @@
+# "lex.yy.c" (generado con el comando flex)
+*.yy.*
+
+# "set_parser_bison.tab.c" y "set_parser_bison.tab.h” (generados con el comando "bison").
+*.tab.*
+
+# "*.output" (generado con la opción "--report=state" del comando "bison").
+*.output
+
+# "*.o" (ficheros objeto generados con g++).
+*.o
+
+# “set_compiler” y “set_compiler.exe" (el compilador ejecutable generado con g++).
+set_compiler
+set_compiler.exe
+
+# "~*" (ficheros de backup).
+~*
